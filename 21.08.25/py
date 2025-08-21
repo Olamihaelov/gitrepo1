@@ -10,7 +10,7 @@
 10.1
 
 
-Part b
+---Part b
 CREATE TABLE televisions (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     catalog_number TEXT NOT NULL UNIQUE,
