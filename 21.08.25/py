@@ -11,7 +11,9 @@
 
 
 Part b
- catalog_number TEXT NOT NULL UNIQUE,
+CREATE TABLE televisions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    catalog_number TEXT NOT NULL UNIQUE,
     brand TEXT NOT NULL CHECK (brand IN ('Samsung', 'LG', 'Sony')),
     model TEXT NOT NULL,
     screen_size INTEGER NOT NULL CHECK (screen_size > 0),
@@ -25,6 +27,9 @@ Part b
         (smart_tv = 'No' AND os IS NULL)
     ),
     panel_type TEXT NOT NULL CHECK (panel_type IN ('OLED', 'QLED', 'LED'))
+
+
+ 
 );
 
 INSERT INTO televisions (
